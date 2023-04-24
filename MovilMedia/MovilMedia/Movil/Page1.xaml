@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovilMedia.Movil.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="Photobutton" Text="Tomar Foto" Pressed="Photobutton_Pressed"
+                   
+                    CornerRadius="20"
+                    VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="Center"
+                   />
+            <ListView x:Name="listPhotos">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Image Source="{Binding Source}"
+                                   Aspect="AspectFill"
+                                   Margin="30,30"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
